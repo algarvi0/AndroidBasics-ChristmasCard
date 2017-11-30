@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+>
+    <!--
+    In this simple Christmas Card i used 1 RelativeLayout with 2 Image Views (one for Background image and one for Santa Claus Image) and
+    7 Text Views (4 For Christmas messages and 3 for Copyright Footer
+    All Views have ID to use in Views positioning.
+    On all Views i have used strings declarations.
+    -->
+
+    <!-- Image View - Background -->
+    <!-- In this image, view beside the elements i spoke previously,
+         I have used scaleType wtih fitXY to fit the image to the view/screen.
+    -->
+    <ImageView
+        android:id="@+id/back_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/santa_claus_img_descr"
+        android:scaleType="fitXY"
+        android:src="@drawable/back"
+
+        />
+
+    <!-- Text View - MerryChristmas -->
+    <!--
+    The Christmas Messagem Block uses gravity to align text views on center,
+    white text with 32sp text size.
+    -->
+    <TextView
+        android:id="@+id/merrychristmas_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:fontFamily="sans-serif-condensed"
+        android:paddingTop="16dp"
+        android:text="@string/merry_christmas"
+        android:textColor="@android:color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"
+
+        />
+
+    <!-- Text View - and -->
+    <TextView
+        android:id="@+id/and_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/merrychristmas_view"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-light"
+        android:paddingTop="8dp"
+        android:text="@string/and"
+        android:textColor="@android:color/white"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <!-- Text View - HappY New Year -->
+    <TextView
+        android:id="@+id/happynewyear_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/and_view"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-light"
+        android:paddingTop="8dp"
+        android:text="@string/happy_new_year"
+        android:textColor="@android:color/white"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <!-- Text View - 2017 -->
+    <TextView
+        android:id="@+id/year2017_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/happynewyear_view"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-light"
+        android:paddingTop="8dp"
+        android:text="@string/_2017"
+        android:textColor="@android:color/white"
+        android:textSize="32sp"
+        android:textStyle="bold|italic" />
+
+    <!-- Image View - Santa Claus -->
+    <!-- In SantaClaus Image View i have used fitEnd in scaleType to align image in the bottom. -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@+id/and_view"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/and_view"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+        android:contentDescription="@string/santa_claus_img_descr"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:scaleType="fitEnd"
+        android:src="@drawable/santa" />
+
+    <!-- FOOTER VIEWS -->
+    <!--
+    In Footer area i have 3 image views:
+    with background color set to a transparent red
+    First it Layout aligned to ParrentBottom to fix in footer area,
+    Second fits beteewn 2017/2018 and By DavidLopes text.
+    The Third Text view its aligned to the Bottom e Right.
+    -->
+    <TextView
+        android:id="@+id/DoisMilDezassete_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#4D000000"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="16dp"
+        android:text="@string/ano2017_2018"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:textStyle="italic" />
+    <!-- Text View Empty -->
+    <TextView
+        android:id="@+id/Vazio_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/ByDavidLopes_view"
+        android:layout_toEndOf="@+id/DoisMilDezassete_view"
+        android:background="#4D000000"
+        android:fontFamily="sans-serif-light"
+        android:padding="16dp"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:textStyle="bold|italic" />
+    <!-- Text ByDavidLopes -->
+    <TextView
+        android:id="@+id/ByDavidLopes_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="#4D000000"
+        android:fontFamily="sans-serif-light"
+        android:padding="16dp"
+        android:text="@string/by_david_lopes"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:textStyle="italic" />
+</RelativeLayout>

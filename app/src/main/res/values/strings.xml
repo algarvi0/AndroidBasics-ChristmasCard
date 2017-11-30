@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Merry Christmas Card</string>
+    <string name="imagem_de_fundo">Imagem de Fundo</string>
+    <string name="happy_new_year">Happy New Year</string>
+    <string name="_2017">2017</string>
+    <string name="and">and</string>
+    <string name="ano2017_2018">© 2017/2018</string>
+    <string name="merry_christmas">Merry Christmas</string>
+    <string name="by_david_lopes">By David Lopes</string>
+    <string name="santa_claus_img_descr">Santa Claus Img</string>
+    <string name="santa_img_desc">Santa Claus Image</string>
+    <string name="santa_claus">Santa Claus</string>
+</resources>
